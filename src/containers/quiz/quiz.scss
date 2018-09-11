@@ -1,10 +1,10 @@
 @import '../../scss/variables.scss';
 
-.quizcontainer{
+.quizcontainer {
   padding-top: 65px;
 }
 
-.header{
+.header {
   background-color: black;
   color: $primary;
   font-size: 16px;
@@ -14,21 +14,23 @@
   top: 0px;
   width: 100%;
 
-  > div{
+  > div {
     align-items: center;
     display: flex;
     height: 60px;
     justify-content: space-between;
   }
 
-  .right{
+  .right {
     display: flex;
-    >.points{
+
+    > .points {
       margin: 0;
       margin-right: 20px;
     }
   }
-  .logo{
+
+  .logo {
     width: 100px;
   }
 }

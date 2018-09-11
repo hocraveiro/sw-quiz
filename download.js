@@ -2,11 +2,15 @@ const axios = require('axios');
 const fs = require('fs');
 const unique = require('./src/utils/unique');
 const sharp = require('sharp');
-const {GOOGLE_API_URL, PEOPLE_IMG_PATH, SW_API_URL, SWAPI_DATA_JSON_PATH} = require('./src/constants');
+const {
+  GOOGLE_API_URL, 
+  PEOPLE_IMG_PATH, 
+  SW_API_URL, 
+  SWAPI_DATA_JSON_PATH,
+  GOOGLE_API_KEY,
+  GOOGLE_CSE_ID
+} = require('./src/constants');
 
-// const {GOOGLE_CSE_ID, GOOGLE_API_KEY} = process.env;
-const GOOGLE_API_KEY = 'AIzaSyBCgBBDEa-EtKvFtLnTdzJgmuvVF2VxWGk';
-const GOOGLE_CSE_ID = '003932150871179886730:al_d74-twee';
 
 async function request (url){
   const response = await axios.get(url);
@@ -188,7 +192,6 @@ async function fetchAll() {
   
   // Search image and save from Google API
   for(let i = 0; i < people.length; i++){
-    console.log(people[i].id+'.jpg');
     const response = await searchGoogleImage(`Star Wars ${people[i].name}`);
     await downloadImage(response.items[0].link, `${people[i].id}.jpg`)
   }

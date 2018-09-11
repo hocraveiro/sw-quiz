@@ -1,16 +1,15 @@
-
-.listitem{
+.listitem {
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: content-box;
   margin-bottom: 10px;
   padding: 10px;
   width: 240px;
 
-  > img{
+  > img {
     display: block;
     width: 100%;
   }
-  > .success{
+  > .success {
     color: green;
     margin-top: 20px;
     text-align: center;
@@ -18,7 +17,6 @@
   > .controls {
     display: flex;
     margin-top: 10px;
-    // flex-direction: colu;
 
     > .name {
       border: 1px solid rgba(255, 255, 255, 0.3);
@@ -37,20 +35,20 @@
       width: 40px;
     }
   }
-  > .tips{
+  > .tips {
     margin: 10px 0;
     font-size: 14px;
-    span{
+    span {
       font-weight: bold;
     }
-    p{
+    p {
       margin: 3px 0px;
     }
   }
 }
 
 @media(max-width: 500px){
-  .listitem{
+  .listitem {
     width: 100%;
   } 
 }

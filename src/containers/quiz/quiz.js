@@ -5,10 +5,11 @@ import Container from '../../components/container';
 import List from '../../components/list';
 import ModalScore from '../../components/modal-score';
 import shuffle from '../../utils/suffle';
-import logo from '../../sw-logo.svg';
+import Logo from '../../components/logo';
 import style from './quiz.scss';
 import people from '../../swapi-data.json'
 
+// Time to start countdown with 2 minutes
 const date = Date.now() + 1000 * 120;
 
 const customStyles = {
@@ -24,7 +25,6 @@ const customStyles = {
 
 Modal.setAppElement('#root')
 
-
 class Quiz extends Component {
   constructor(){
     super();
@@ -37,9 +37,9 @@ class Quiz extends Component {
       person.showTip = false
       return person;
     });
+
     const peopleSuffle = shuffle(peopleArray);
     this.state = {people: peopleSuffle, loading: true, points: 0, modalIsOpen: false};
-    
   }
 
   openModal() {
@@ -47,7 +47,6 @@ class Quiz extends Component {
   }
 
   closeModal() {
-    console.log('hereee')
     this.setState({modalIsOpen: false});
     this.props.history.push('/');
   }
@@ -82,7 +81,7 @@ class Quiz extends Component {
       <Container className={style.quizcontainer}>
         <div className={style.header}>
           <Container>
-            <img src={logo} className={style.logo} alt="logo" />
+            <Logo className={style.logo} />
             <div className={style.right}> 
               <p className={style.points}>{this.state.points} points</p>
               <Countdown date={date} onComplete={this.onTimerComplete.bind(this)}></Countdown>
@@ -110,4 +109,3 @@ class Quiz extends Component {
 }
 
 export default Quiz;
-

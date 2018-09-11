@@ -1,12 +1,11 @@
 import React, {Component} from 'react';
 import style from './modal-score.scss';
-import SwButton from '../button';
 
 class ModalScore extends Component {
   constructor(props){
     super(props);
     
-    this.state = {name: 'Henrique', email: 'hocraveiro@gmail.com'};
+    this.state = {name: '', email: ''};
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
