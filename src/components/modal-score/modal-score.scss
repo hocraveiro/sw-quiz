@@ -1,0 +1,44 @@
+@import '../../scss/variables.scss';
+
+.modalscore{
+  width: 300px;
+
+  > .title{
+    margin: 0px;
+    text-align: center;
+  }
+
+  > .points {
+    color: $primary;
+    text-align: center;
+    font-size: 22px;
+    font-weight: normal;
+    > span{
+      font-size: 32px;
+    }
+  }
+
+  > .formsave {
+    > .label {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 3px;
+    }
+    > .input {
+      background: none;
+      border: 1px solid #000;
+      display: block;
+      padding: 10px;
+      margin-bottom: 10px;
+      width: calc(100% - 20px);
+    }
+    > .btn {
+      background: $primary;  
+      border: 1px solid $primary;
+      color: rgba(0,0,0,0.8);
+      box-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+      padding: 10px;
+      font-weight: bold;
+    }
+  }
+}

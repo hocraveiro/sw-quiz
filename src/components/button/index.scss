@@ -1,0 +1,11 @@
+@import '../../scss/variables.scss';
+
+.primary{
+  background: none;
+  border: 1px solid $primary;
+  color: $primary;
+  font-size: 16px;
+  margin: auto;
+  padding: 15px;
+  width: 120px;
+}

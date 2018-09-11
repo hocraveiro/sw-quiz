@@ -1,0 +1,62 @@
+
+.listitem{
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: content-box;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 240px;
+
+  > img{
+    display: block;
+    width: 100%;
+  }
+  > .success{
+    color: green;
+    margin-top: 20px;
+    text-align: center;
+  }
+  > .controls {
+    display: flex;
+    margin-top: 10px;
+    // flex-direction: colu;
+
+    > .name {
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: rgba(255, 255, 255, 0.8);
+      background: none;
+      display: block;
+      font-size: 14px;
+      padding: 10px;
+      width: calc(100% - 45px);
+    }
+
+    > .btntip {
+      text-align: center;
+      font-size: 17px;
+      padding: 8px 0;
+      width: 40px;
+    }
+  }
+  > .tips{
+    margin: 10px 0;
+    font-size: 14px;
+    span{
+      font-weight: bold;
+    }
+    p{
+      margin: 3px 0px;
+    }
+  }
+}
+
+@media(max-width: 500px){
+  .listitem{
+    width: 100%;
+  } 
+}
+
+@media(max-width: 768px){
+  .listitem{
+    width: 46%;
+  } 
+}
