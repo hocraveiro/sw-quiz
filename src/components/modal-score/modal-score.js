@@ -53,9 +53,9 @@ class ModalScore extends Component {
         <p>Type the form to save your score</p>
         <form className={style.formsave} onSubmit={this.handleSubmit}>
           <label className={style.label}>Name:</label>
-          <input className={style.input} type="text" name="name" value={this.state.name} onChange={this.handleInputChange} />
+          <input required className={style.input} type="text" name="name" value={this.state.name} onChange={this.handleInputChange} />
           <label className={style.label}>E-mail:</label>
-          <input className={style.input} type="email" name="email" value={this.state.email} onChange={this.handleInputChange} />
+          <input required className={style.input} type="email" name="email" value={this.state.email} onChange={this.handleInputChange} />
           {/* <SwButton>Submit</SwButton> */}
           <input className={style.btn} type="submit" value="Save" />
         </form>
